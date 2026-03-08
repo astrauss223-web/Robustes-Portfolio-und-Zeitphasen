@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Zeitphasen V2</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles_v2.css">
+</head>
+
+<body>
+    <header class="mlp-header">
+        <div class="header-container">
+            <h1>Robustes Portfolio</h1>
+            <p class="subtitle">Strategie schlägt Zufall – Ihr Zeitphasenmodell nach Managementansätzen</p>
+        </div>
+    </header>
+
+    <main class="content-container">
+
+        <section class="intro-section">
+            <p class="intro-text">
+                Ein Vermögensaufbau erfordert eine strukturierte Zuordnung von Kapital in unterschiedliche Anlageklassen
+                und Strategien,
+                abhängig von Ihrem persönlichen Anlagehorizont (Zeitphasen).
+            </p>
+        </section>
+
+        <!-- The Interactive Matrix -->
+        <section class="portfolio-matrix">
+            <div class="matrix-header">
+                <h2>Zeitphasen und Zielzeiträume</h2>
+                <p>Klicken Sie auf eine Zeitphase, um die passenden Managementansätze und Anlageklassen im Portfolio
+                    hervorzuheben.</p>
+            </div>
+
+            <!-- Timeline Navigation -->
+            <div class="timeline-nav" id="timeline-container">
+                <!-- Javascript will populate timeline buttons -->
+            </div>
+
+            <!-- Interactive Row: Tower & Detail Card -->
+            <div class="phase-interaction-area flex-columns">
+
+                <div class="tower-wrapper">
+                    <h3>Managementansätze</h3>
+                    <!-- V2: The management approaches tower -->
+                    <div class="management-tower" id="tower-container">
+                        <!-- Layer DOM elements will be injected via JS -->
+                    </div>
+                </div>
+
+                <!-- Detailed Phase Info -->
+                <div class="phase-detail-card" id="phase-detail-card">
+                    <div class="phase-header">
+                        <h3 id="detail-phase-name">Alle Phasen anzeigen</h3>
+                    </div>
+                    <div class="phase-content">
+                        <div class="detail-group">
+                            <span class="detail-label">Zielzeitraum:</span>
+                            <span class="detail-value" id="detail-duration">Gesamter Anlagehorizont</span>
+                        </div>
+                        <div class="detail-group">
+                            <span class="detail-label">Anlageklasse:</span>
+                            <span class="detail-value" id="detail-asset-class">Alle verfügbaren Anlageklassen</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Optional additional info below the tower -->
+            <div class="portfolio-blocks">
+                <p class="hinweis-text">Wählen Sie oben eine Zeitphase aus, um die zugehörigen Managmentansätze –
+                    passend zum VEM-Profil – im Turm farblich hervorzuheben.</p>
+            </div>
+
+        </section>
+
+        <section class="strategy-banner info-banner">
+            <div class="banner-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="16" x2="12" y2="12"></line>
+                    <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                </svg>
+            </div>
+            <div class="banner-content">
+                <strong>Gut zu wissen:</strong> Externe Sparraten reduzieren das Risiko. Regelmäßige Umschichtungen,
+                Reinvestitionen in Vermögensverwalter und situative Gewinnmitnahmen ("Momentum-Strategie") optimieren
+                Ihr Portfolio fortlaufend.
+            </div>
+        </section>
+
+        <footer class="action-footer">
+        </footer>
+    </main>
+
+    <!-- Modal for showing funds -->
+    <div class="modal-overlay" id="funds-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="header-left">
+                    <h3 id="modal-title">Fonds</h3>
+                    <select id="modal-filter" class="modal-filter" style="display:none;"></select>
+                </div>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <ul class="funds-list" id="modal-funds-list">
+                    <!-- Javascript will populate funds here -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="app_v2.js"></script>
+</body>
+
+</html>
